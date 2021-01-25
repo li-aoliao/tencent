@@ -1,0 +1,737 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'PingFangSC-Regular', 'helvetica neue', tahoma, 'PingFang SC', 'microsoft yahei', arial, 'hiragino sans gb', sans-serif;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+.box{
+    width: 100%;
+    min-width: 1200px;
+    header{
+        min-width: 1000px;
+        width: 100%;
+        height: 72px;
+        position: absolute;
+        top: 0;
+        z-index: 5;
+        background-color: #fff;
+        .head{
+            width: 1200px;
+            height: 72px;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .logo{
+                width: 168px;
+                height: 22px;
+                a{
+                    display: block;
+                    width: 168px;
+                    height: 22px;
+                    background: url(https://www.tencent.com/img/index/menu_logo_hover.png) no-repeat 0 0/100% 100%;
+                }
+            }
+            .nav{
+                width: 672px;
+                height: 72px;
+                display: flex;
+                justify-content: space-between;
+                >li{
+                    height: 72px;
+                    position: relative;
+                    &:hover{
+                        >a>span{
+                            width: 100%;
+                            opacity: 1;
+                        }
+                        >ul{
+                            opacity: 1;
+                            height: 343px;
+                        }
+                    }
+                    >a{
+                        display: block;
+                        height: 72px;
+                        font-size: 16px;
+                        color: #2b2e2e;
+                        font-weight: bold;
+                        opacity: 0.95;
+                        line-height: 72px;
+                        position: relative;
+                        span{
+                            display: block;
+                            height: 4px;
+                            width: 0;
+                            position: absolute;
+                            bottom: 19px;
+                            left: 50%;
+                            background: #194ac3;
+                            opacity: 0;
+                            transition: 0.5s;
+                            transform: translate(-50%);
+                            z-index: 2;
+                        }
+                    }
+                    >ul{
+                        opacity: 0;
+                        position: absolute;
+                        top: 72px;
+                        height: 0;
+                        transition: 0.5s;
+                        overflow: hidden;
+                        li{
+                            width: 160px;
+                            &:hover{
+                                a{
+                                    color: #000;
+                                }
+                            }
+                            a{
+                                display: block;
+                                font-size: 16px;
+                                color: #2b2e2e;
+                                opacity: 0.7;
+                                padding: 13px 0;
+                            }
+                        }
+                    }
+                    
+                }
+            }
+            .lang{
+                width: 93px;
+                height: 24px;
+                a{
+                    font-size: 16px;
+                    opacity: 0.7;
+                    color: #000;
+                }
+                span{
+                    font-size: 16px;
+                    color:#2b2e2e;
+                    opacity: 0.7;
+                };
+            }
+        }
+    }
+    .bg{
+        width: 100%;
+        height: 0;
+        background-color: #fff;
+        transition: 0.2s;
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        z-index: 4;
+    }
+    .bgImg{
+        width: 100%;
+        height: 482px;
+        background: url(https://www.tencent.com/img/banners/investor-1.jpg) no-repeat top/cover;
+        position: relative;
+        top: 72px;
+        >div{
+            width: 1200px;
+            position: absolute;
+            top: 202px;
+            left: calc((100% - 1200px)/2);
+            h2{
+                font-family: 'TencentSansw3';
+                font-size: 44px;
+                color: #2a2e2e;
+                margin-bottom: 8px;
+                font-weight: 400;
+            }
+            p{
+                font-size: 16px;
+                color: #2A2E2E
+            }
+        }
+    }
+    .faceto{
+        width: 100%;
+        height: 68px;
+        border-bottom: 1px solid #f4f4f4;
+        margin-top: 72px;
+        >div{
+            width: 1200px;
+            height: 100%;
+            margin: auto;
+            display: flex;
+            >a{
+                display: block;
+                height: 68px;
+                color: #2a2e2e;
+                font-size: 20px;
+                line-height: 68px;
+                margin-right: 56px;
+                position: relative;
+            }
+            a:nth-child(1){
+                &::after{
+                content: '';
+                display: block;
+                width: 100%;
+                height: 2px;
+                background-color: #0052d9;
+                position: absolute;
+                bottom: 0;
+                }
+            }
+        }
+    }
+    .news{
+        padding: 96px 0;
+        >div{
+            width: 1200px;
+            margin: auto;
+            .news_title{
+                font-size: 30px;
+                color: #2a2e2e;
+                font-family: 'TencentSansw7';
+                height: 45px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                a{
+                    font-size: 16px;
+                    color: #5F6464;
+                    letter-spacing: 0;
+                    font-weight: bold;
+                    i{
+                        display: inline-block;
+                        margin-left: 10px;
+                        width: 8px;
+                        height: 14px;
+                        background: url(https://www.tencent.com/img/investor/more-awart.png) no-repeat center;
+                        background-size: 100% 100%;
+                    }
+                }
+            }
+            .news_content{
+                width: 100%;
+                margin-top: 32px;
+                display: flex;
+                justify-content: space-between;
+                >div{
+                    width: 49%;
+                    background: #fff;
+                    border: 1px solid #EFEFEF;
+                    padding: 32px 45px 41px 0px;
+                    box-sizing: border-box;
+                }
+                .newsl{
+                    h4{
+                        font-size: 16px;
+                        color: #5f6464;
+                        letter-spacing: 0;
+                        line-height: 25px;
+                        font-weight: bold;
+                        padding-left: 32px;
+                    }
+                    .list_box{
+                        margin-top: 40px;
+                        .list_box1{
+                            width: 82%;
+                            padding-left: 32px;
+                            box-sizing: border-box;
+                            position: relative;
+                            :nth-child(1){
+                                font-size: 20px;
+                                color: #2A2E2E;
+                                letter-spacing: -0.01px;
+                                line-height: 30px;
+                                font-weight: bold;
+                                margin-bottom: 4px;
+                                width: 100%;
+                                white-space: nowrap;
+                                text-overflow: ellipsis;
+                                overflow: hidden;
+                                word-break: break-word;
+                            }
+                            :nth-child(2){
+                                margin-bottom: 4px;
+                                width: 100%;
+                                overflow: hidden;
+                                position: relative;
+                                a{
+                                    font-size: 16px;
+                                    font-weight: bold;
+                                    color: #0052d9;
+                                }
+                                img{
+                                    position: absolute;
+                                    width: 20px;
+                                    height: 20px;
+                                    left: 70px;
+                                    top: 4.5px;
+                                }
+                            }
+                            :nth-child(3){
+                                line-height: 29px;
+                                width: 100%;
+                                a{
+                                    font-size: 16px;
+                                    color: #919797;
+                                    letter-spacing: 0;
+                                }
+                            }
+                            &::after{
+                                content: "";
+                                display: block;
+                                width: 6px;
+                                height: 100%;
+                                background: #0052D9;
+                                position: absolute;
+                                left: -1px;
+                                top: 0;
+                                display: none;
+                            }
+                            &:hover{
+                                &::after{
+                                    display: block;
+                                }
+                            }
+                        }
+                        >div:nth-child(2){
+                            margin-top: 23px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    %title{//标题共有样式
+        font-size: 30px;
+        color: #2a2e2e;
+        font-family: 'TencentSansw7';
+        height: 45px;
+        padding-bottom: 24px;
+        border-bottom: 1px solid #F2F3F5;
+        margin-bottom: 50px;
+    }
+    .notice{
+        padding: 96px 0;
+        background-color: #fbfbfb;
+        >div{
+            width: 1200px;
+            margin: auto;
+            >h2{
+                @extend %title;
+            }
+            .notice_box{
+                display: flex;
+                justify-content: space-between;
+                >div{
+                    width: 47%;
+                    >h1{
+                        @extend %doubleTitle;
+                    }
+                    >div{
+                        height: 290px;
+                        box-sizing: border-box;
+                        background: #fff;
+                        padding: 32px 42px 0px 32px;
+                        border: 1px solid #EFEFEF;
+                    }
+                    .notice_text{
+                        >div{
+                            em{
+                                width: 21px;
+                                height: 20px;
+                                background: url(https://www.tencent.com/img/investor/ind-bg.png) no-repeat center;
+                                background-size: 100% 100%;
+                                float: left;
+                                text-align: center;
+                                line-height: 20px;
+                                font-style: normal;
+                                font-family: 'TencentSansw7';
+                                font-size: 10px;
+                                color: #FFFFFF;
+                                letter-spacing: -0px;
+                                margin-right: 24px;
+                                margin-top: 5px;
+                            }
+                            a{
+                                display: block;
+                                width: calc(100% - 50px);
+                                margin-left: 50px;
+                                :nth-child(1){
+                                    font-size: 16px;
+                                    color: #2A2E2E;
+                                    letter-spacing: 0;
+                                    line-height: 29px;
+                                    overflow: hidden;
+                                    white-space: nowrap;
+                                    overflow: hidden;
+                                    text-overflow: ellipsis;
+                                    font-weight: bold;
+                                }
+                                :nth-child(2){
+                                    font-size: 14px;
+                                    color: #919797;
+                                    letter-spacing: 0;
+                                    line-height: 25px;
+                                }
+                            }
+                        }
+                        >div:nth-child(2),>div:nth-child(3){
+                            margin-top: 24px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    %doubleTitle{//标题有查看全部的样式
+        font-size: 24px;
+        color: #2A2E2E;
+        letter-spacing: 0;
+        line-height: 36px;
+        font-weight: bold;
+        margin-bottom: 24px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        a{
+            font-size: 16px;
+            color: #5F6464;
+            letter-spacing: 0;
+            font-weight: bold;
+            i{
+                display: inline-block;
+                margin-left: 10px;
+                width: 8px;
+                height: 14px;
+                background: url(https://www.tencent.com/img/investor/more-awart.png) no-repeat center;
+                background-size: 100% 100%;
+            }
+        }
+    }
+    .business_meeting{
+        padding: 96px 0;
+        >div{
+            width: 1200px;
+            margin: auto;
+            >h2{
+                @extend %title;
+            }
+            .business_meeting_box{
+                display: flex;
+                justify-content: space-between;
+                >div{
+                    width: 47.5%;
+                    >h1{
+                        @extend %doubleTitle;
+                    }
+                    >div{
+                        border: 1px solid #EFEFEF;
+                        box-sizing: border-box;
+                        min-height: 304px;
+                    }
+                    .meeting_box{
+                        h1{
+                            height: 60px;
+                            padding: 0 42px;
+                            line-height: 60px;
+                            font-size: 20px;
+                            color: #2A2E2E;
+                            letter-spacing: 0;
+                            border-bottom: 1px solid #F2F3F5;
+                            white-space: nowrap;
+                            text-overflow: ellipsis;
+                            overflow: hidden;
+                            word-break: break-all;
+                            font-weight: bold;
+                        }
+                        >p{
+                            padding-left: 42px;
+                            font-size: 16px;
+                            color: #2A2E2E;
+                            letter-spacing: 0;
+                            line-height: 29px;
+                            float: left;
+                            font-weight: bold;
+                            min-width: 64px;
+                            cursor: pointer;
+                            span{
+                                font-size: 16px;
+                                color: #2A2E2E;
+                                letter-spacing: 0;
+                                line-height: 29px;
+                                margin-left: 50px;
+                                font-weight: none;
+                            }
+                        }
+                    }
+                    .timer_box{
+                        h1{ 
+                            width: 100%;
+                            height: 60px;
+                            font-size: 20px;
+                            color: #2A2E2E;
+                            letter-spacing: 0;
+                            border-bottom: 1px solid #F2F3F5;
+                            line-height: 60px;
+                            display: flex;
+                            >div{
+                                width: 50%;
+                                height: 100%;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                cursor: pointer;
+                                p{  width: 64px;
+                                    font-size: 16px;
+                                    color: #2A2E2E;
+                                    position: relative;
+                                }
+                            }
+                            >div:nth-child(1){
+                                p::after{
+                                    content: "";
+                                    display: block;
+                                    width: 100%;
+                                    height: 2px;
+                                    position: absolute;
+                                    bottom: 0;
+                                    left: 0;
+                                    background-color: #0052d9;
+                                }
+                            }
+                        }
+                        >p{
+                            font-size: 16px;
+                            color: #919797;
+                            letter-spacing: 0;
+                            line-height: 29px;
+                            margin-top: 116px;
+                            width: 100%;
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .tools{
+        padding: 96px 0 64px 0;
+        background-color: #fbfbfb;
+        >div{
+            width: 1200px;
+            margin: auto;
+            >h2{
+                height: 45px;
+                font-size: 30px;
+                color: #2a2e2e;
+                font-family: 'TencentSansw7';
+            }
+            .tools_pic{
+                margin-top: 32px;
+                display: flex;
+                justify-content: space-between;
+                a{
+                    display: block;
+                    width: 180px;
+                    height: 180px;
+                    text-align: center;
+                    &:hover{
+                        background-color: #fff;
+                    }
+                    img{
+                        height: 60px;
+                        margin-top: 43px;
+                    }
+                    p{
+                        font-size: 16px;
+                        color: #2A2E2E;
+                        letter-spacing: -0.01px;
+                        margin-top: 12px;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+    }
+    .link_box{
+        padding: 96px 0;
+        >div{
+            width: 1200px;
+            margin: auto;
+            >a{
+                display: block;
+                width: 100%;
+                position: relative;
+                >img{
+                    width: 100%;
+                    height: 355px;
+                }
+                .callus{
+                    position: absolute;
+                    top: 35px;
+                    left: 78px;
+                    h2{
+                        font-family: 'TencentSansw7';
+                        font-size: 30px;
+                        color: #2a2e2e;
+                    }
+                    .chaxun{
+                        font-size: 20px;
+                        font-weight: 500;
+                        line-height: 36px;
+                        color: #0052d9;
+                        margin-top: 20px;
+                        margin-right: 5px;
+                        position: relative;
+                        img{
+                            width: 19px;
+                            height: 16px;
+                            position: absolute;
+                            right: 45px;
+                            top: 10px;
+                        }
+                    }
+                    .gzh{
+                        font-size: 16px;
+                        line-height: 29px;
+                        color: #2a2e2e;
+                        margin-top: 24px;
+                    }
+                    .gzh-1{
+                        font-size: 20px;
+                        line-height: 36px;
+                        color: #0052D9;
+                        margin-top: 0px;
+                        &:hover~img{
+                            display: inline-block;
+                        }
+                    }
+                    >img{
+                        width: 80px;
+                        height: 80px;
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+
+
+    .focus{
+        width: 1200px;
+        height: 89px;
+        box-sizing: border-box;
+        border-bottom: 1px solid #f2f3f5;
+        padding-top: 33px;
+        display: flex;
+        margin: 0 auto 40px;
+        position: relative;
+        h2{ 
+            font-size: 20px;
+            color: #5f6464;
+            margin-right: 28px;
+        }
+        >a{
+            display: block;
+            width: 28px;
+            height: 28px;
+            margin-right: 28px;
+            transition: 0.3s;
+        }
+        >img{
+            width: 176px;
+            height: 176px;
+            position: absolute;
+            bottom: 55px;
+            left: 94px;
+            z-index: 2;
+            display: none;
+        }
+        .wechat{
+            background: url(https://www.tencent.com/img/index/icon_wechat.png) no-repeat center/100% 100%;
+            &:hover{
+                background-image: url(https://www.tencent.com/img/index/icon_wechat_hover.png);
+            }
+            &:hover~img{
+                display: block;
+            }
+        }
+        .weibo{
+            background: url(https://www.tencent.com/img/index/icon_weibo.png) no-repeat center/100% 100%;
+            &:hover{
+                background-image: url(https://www.tencent.com/img/index/icon_weibo_hover.png);
+            }
+        }
+        .twitter{
+            background: url(https://www.tencent.com/img/index/icon_twitter.png) no-repeat center/100% 100%;
+            &:hover{
+                background-image: url(https://www.tencent.com/img/index/icon_twitter_hover.png);
+            }
+        }
+        .in{
+            background: url(https://www.tencent.com/img/index/icon_in.png) no-repeat center/100% 100%;
+            &:hover{
+                background-image: url(https://www.tencent.com/img/index/icon_in_hover.png);
+            }
+        }
+    }
+    nav{
+        width: 1200px;
+        margin: auto;
+        display: flex;
+        position: relative;
+        .join,.contact,.legal{
+            width: 216px;
+            display: flex;
+            flex-direction: column;
+            h2{
+                font-size: 20px;
+                color: #5f6464;
+                margin-bottom: 30px;
+            }
+            a{
+                font-size: 16px;
+                color: #5f6464;
+                margin-bottom: 18px;
+            }
+        }
+        >a{
+            width: 212px;
+            height: 28px;
+            position: absolute;
+            bottom: 100px;
+            right: 100px;
+            img{
+                width: 212px;
+                height: 28px;
+            }
+        }
+    }
+    footer{
+        width: 1220px;
+        margin: 80px auto;
+        display: flex;
+        .footl{
+            width: 50%;
+            display: flex;
+            justify-content: space-between;
+            a{
+                font-size: 14px;
+                color: #5f6464;
+            }
+        }
+        .footr{
+            width: 50%;
+            font-size: 14px;
+            color: #5f6464;
+            text-align: right;
+        }
+    }
+}

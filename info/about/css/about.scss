@@ -1,0 +1,600 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'PingFangSC-Regular', 'helvetica neue', tahoma, 'PingFang SC', 'microsoft yahei', arial, 'hiragino sans gb', sans-serif;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+.box{
+    width: 100%;
+    header{
+        min-width: 1000px;
+        width: 100%;
+        height: 72px;
+        position: absolute;
+        top: 0;
+        z-index: 5;
+        background-color: #fff;
+        .head{
+            width: 1200px;
+            height: 72px;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .logo{
+                width: 168px;
+                height: 22px;
+                a{
+                    display: block;
+                    width: 168px;
+                    height: 22px;
+                    background: url(https://www.tencent.com/img/index/menu_logo_hover.png) no-repeat 0 0/100% 100%;
+                }
+            }
+            .nav{
+                width: 672px;
+                height: 72px;
+                display: flex;
+                justify-content: space-between;
+                >li{
+                    height: 72px;
+                    position: relative;
+                    &:hover{
+                        >a>span{
+                            width: 100%;
+                            opacity: 1;
+                        }
+                        >ul{
+                            opacity: 1;
+                            height: 343px;
+                        }
+                    }
+                    >a{
+                        display: block;
+                        height: 72px;
+                        font-size: 16px;
+                        color: #2b2e2e;
+                        font-weight: bold;
+                        opacity: 0.95;
+                        line-height: 72px;
+                        position: relative;
+                        span{
+                            display: block;
+                            height: 4px;
+                            width: 0;
+                            position: absolute;
+                            bottom: 19px;
+                            left: 50%;
+                            background: #194ac3;
+                            opacity: 0;
+                            transition: 0.5s;
+                            transform: translate(-50%);
+                            z-index: 2;
+                        }
+                    }
+                    >ul{
+                        opacity: 0;
+                        position: absolute;
+                        top: 72px;
+                        height: 0;
+                        transition: 0.5s;
+                        overflow: hidden;
+                        li{
+                            width: 160px;
+                            &:hover{
+                                a{
+                                    color: #000;
+                                }
+                            }
+                            a{
+                                display: block;
+                                font-size: 16px;
+                                color: #2b2e2e;
+                                opacity: 0.7;
+                                padding: 13px 0;
+                            }
+                        }
+                    }
+                    
+                }
+            }
+            .lang{
+                width: 93px;
+                height: 24px;
+                a{
+                    font-size: 16px;
+                    opacity: 0.7;
+                    color: #000;
+                }
+                span{
+                    font-size: 16px;
+                    color:#2b2e2e;
+                    opacity: 0.7;
+                };
+            }
+        }
+    }
+    .bg{
+        width: 100%;
+        height: 0;
+        background-color: #fff;
+        transition: 0.2s;
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        z-index: 4;
+    }
+    .bgImg{
+        width: 100%;
+        min-width: 1200px;
+        height: 482px;
+        background: url(https://www.tencent.com/img/banners/brief-1.jpg) no-repeat top/cover;
+        position: relative;
+        top: 72px;
+        >div{
+            width: 1200px;
+            position: absolute;
+            top: 202px;
+            left: calc((100% - 1200px)/2);
+            h2{
+                font-family: 'TencentSansw3';
+                font-size: 44px;
+                color: #fff;
+                margin-bottom: 8px;
+                font-weight: 400;
+            }
+        }
+    }
+    .faceto{
+        width: 100%;
+        height: 68px;
+        border-bottom: 1px solid #f4f4f4;
+        margin-top: 72px;
+        >div{
+            width: 1200px;
+            height: 100%;
+            margin: auto;
+            display: flex;
+            >a{
+                display: block;
+                height: 68px;
+                color: #2a2e2e;
+                font-size: 20px;
+                line-height: 68px;
+                margin-right: 56px;
+                position: relative;
+            }
+            a:nth-child(1){
+                &::after{
+                content: '';
+                display: block;
+                width: 100%;
+                height: 2px;
+                background-color: #0052d9;
+                position: absolute;
+                bottom: 0;
+                }
+            }
+        }
+    }
+    .introduce_mission{
+        width: 1200px;
+        margin: auto;
+        padding: 96px 0;
+        #introduce_title{ 
+            width: 100%;
+            height: 45px;
+            text-align: center;
+            font-size: 30px;
+            color: #2a2e2e;
+            font-family: 'TencentSansw7';
+        }
+        .introduce_content{
+            margin-top: 52px;
+            text-align: center;
+            h4{ 
+                height: 36px;
+                font-size: 20px;
+                color: #2A2E2E;
+                font-weight: 400;
+            }
+            p{  
+                height: 25px;
+                line-height: 25px;
+                font-size: 14px;
+                color: #5F6464;
+            }
+        }
+        .mission{
+            background: #FBFBFB;
+            height: 312px;
+            width: 100%;
+            position: relative;
+            margin-top: 96px;
+            padding: 60px 96px;
+            box-sizing: border-box;
+            #mission_title{
+                font-size: 30px;
+                color: #2A2E2E;
+                float: left;
+            }
+            .mission_content{
+                width: 390px;
+                float: right;
+                position: relative;
+                &::before{
+                    content: "";
+                    width: 1px;
+                    height: 190px;
+                    position: absolute;
+                    left: -60px;
+                    top: 0;
+                    display: block;
+                    bottom: 0;
+                    background: #D8D9DC;
+                }
+                h4{
+                    font-size: 20px;
+                    color: #2A2E2E;
+                    line-height: 36px;
+                }
+                p{
+                    font-size: 14px;
+                    color: #5F6464;
+                    letter-spacing: 0;
+                    line-height: 25px;
+                    margin-top: 16px;
+                }
+            }
+        }
+    }
+    .history{
+        width: 100%;
+        .history_header{
+            height: 384px;
+            background: url(https://www.tencent.com/img/brief/banner.jpg) no-repeat center/cover;
+            #history_title{
+                text-align: center;
+                font-size: 30px;
+                line-height: 45px;
+                padding-top: 150px;
+                color: #fff;
+                font-family: 'TencentSansw7';
+            }
+            .history_time{
+                width: 520px;
+                padding-top: 70px;
+                margin: auto;
+                position: relative;
+                .time{
+                    width: 520px;
+                    position: absolute;
+                    top: 40px;
+                    display: flex;
+                    justify-content: space-between;
+                    a{  
+                        display: block;
+                        color: #fff;
+                        font-size: 16px;
+                    }
+                }
+                .core{
+                    display: flex;
+                    align-items: center;
+                    .cirle{
+                        display: block;
+                        width: 24px;
+                        height: 24px;
+                        box-sizing: border-box;
+                        border-radius: 50%;
+                        background-color: #fff;
+                        border: 2px solid rgba(255,255,255,0.5);
+                    }
+                    .line{
+                        display: block;
+                        width: 100px;
+                        height: 2px;
+                        background: rgba(255,255,255,0.5);
+                    }
+                }
+            }
+        }
+    }
+    .history_main{
+        width: 100%;
+        display: flex;
+        >li{
+            width: 384px;
+            margin-right: 25px;
+            h1{
+                font-size: 24px;
+                padding-top: 40px;
+                line-height: 36px;
+                font-family: 'TencentSansw7';
+                padding-bottom: 8px;
+                border-bottom: 1px solid #D8D9DC;
+                margin-bottom: 18px;
+                color: #2A2E2E;
+            }
+            p{  
+                box-sizing: border-box;
+                padding: 0 15px;
+                line-height: 25px; 
+                margin-bottom: 18px;
+                font-size: 14px;
+                color: #5F6464;
+            }
+        }
+    }
+    .business{
+        width: 1200px;
+        box-sizing: border-box;
+        margin: 20px auto;
+        padding: 80px 0;
+        #business_title{
+            font-size: 30px;
+            color: #2a2e2e;
+            font-family: 'TencentSansw7';
+            height: 45px;
+        }
+        .business_content{
+            margin-top: 38px;
+            >h3{
+                text-align: center;
+                margin: 12px 0 64px 0;
+                position: relative;
+                img{
+                    height: 24px;
+                }
+                &::after{
+                    content: ' ';
+                    height: 26px;
+                    width: 2px;
+                    background: #D8D9DC;
+                    position: absolute;
+                    bottom: -38px;
+                    left: 50%;
+                }
+            }
+            .business_card{
+                height: 134px;
+                position: relative;
+                display: flex;
+                justify-content: space-between;
+                &::before{
+                    content: ' ';
+                    position: absolute;
+                    left: 50%;
+                    width: 83.86%;
+                    top: -26px;
+                    height: 2px;
+                    background: #D8D9DC;
+                    display: block;
+                    transform: translateX(-50%);
+                }
+                >li{
+                    width: 195px;
+                    height: 100%;
+                    position: relative;
+                    background: #F2F3F5;
+                    padding: 32px 10px;
+                    box-sizing: border-box;
+                    text-align: center;
+                    &::before{
+                        content: ' ';
+                        height: 26px;
+                        width: 2px;
+                        background: #D8D9DC;
+                        position: absolute;
+                        top: -26px;
+                        left: 50%;
+                    }
+                    p:nth-child(1){
+                        font-size: 30px;
+                        color: #0052D9;
+                        font-family: 'TencentSansw7';
+                    }
+                    p:nth-child(2){
+                        font-size: 14px;
+                        color: #5F6464;
+                        line-height: 25px;
+                    }
+                }
+            }
+        }
+        .mess_text{
+            box-sizing: border-box;
+            margin-top: 48px;
+            padding: 32px 42px;
+            font-size: 14px;
+            color: #5F6464;
+            letter-spacing: 0;
+            line-height: 25px;
+            text-align: left;
+        }
+    }
+    .team{
+        width: 1200px;
+        padding: 96px 0;
+        margin: auto;
+        #team_title{
+            font-size: 30px;
+            color: #2a2e2e;
+            font-family: 'TencentSansw7';
+            height: 45px;
+        }
+        .person{
+            display: flex;
+            flex-wrap: wrap;
+            >li{
+                width: 25%;
+                height: 260px;
+                position: relative;
+                box-sizing: border-box;
+                padding-left: 32px;
+                transition: 0.3s;
+                cursor: pointer;
+                &:hover{
+                    background-color: #f2f3f5;
+                    i{
+                        top: 92px;
+                        right: 92px;
+                    }
+                }
+                img{
+                    width: 120px;
+                    height: 120px;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                }
+                >div{
+                    margin-top: 105px;
+                    h1{
+                        font-size: 20px;
+                        line-height: 30px;
+                        color: #0052d9;
+                        margin-bottom: 10px;
+                    }
+                    p{
+                        font-size: 14px;
+                        line-height: 21px;
+                        color: #5f6464;
+                    }
+                }
+                >i{
+                    width: 28px;
+                    height: 28px;
+                    background-color: #0052d9;
+                    position: absolute;
+                    right: 106px;
+                    top: 106px;
+                    transition: 0.3s;
+                }
+            }
+        }
+        .adviser{
+            font-size: 24px;
+            line-height: 43px;
+            color: #2a2e2e;
+            font-weight: 400;
+            margin-top: 60px;
+            margin-bottom: 35px;
+        }
+    }
+    .focus{
+        width: 1200px;
+        height: 89px;
+        box-sizing: border-box;
+        border-bottom: 1px solid #f2f3f5;
+        padding-top: 33px;
+        display: flex;
+        margin: 0 auto 40px;
+        position: relative;
+        h2{ 
+            font-size: 20px;
+            color: #5f6464;
+            margin-right: 28px;
+        }
+        >a{
+            display: block;
+            width: 28px;
+            height: 28px;
+            margin-right: 28px;
+            transition: 0.3s;
+        }
+        >img{
+            width: 176px;
+            height: 176px;
+            position: absolute;
+            bottom: 55px;
+            left: 94px;
+            z-index: 2;
+            display: none;
+        }
+        .wechat{
+            background: url(https://www.tencent.com/img/index/icon_wechat.png) no-repeat center/100% 100%;
+            &:hover{
+                background-image: url(https://www.tencent.com/img/index/icon_wechat_hover.png);
+            }
+            &:hover~img{
+                display: block;
+            }
+        }
+        .weibo{
+            background: url(https://www.tencent.com/img/index/icon_weibo.png) no-repeat center/100% 100%;
+            &:hover{
+                background-image: url(https://www.tencent.com/img/index/icon_weibo_hover.png);
+            }
+        }
+        .twitter{
+            background: url(https://www.tencent.com/img/index/icon_twitter.png) no-repeat center/100% 100%;
+            &:hover{
+                background-image: url(https://www.tencent.com/img/index/icon_twitter_hover.png);
+            }
+        }
+        .in{
+            background: url(https://www.tencent.com/img/index/icon_in.png) no-repeat center/100% 100%;
+            &:hover{
+                background-image: url(https://www.tencent.com/img/index/icon_in_hover.png);
+            }
+        }
+    }
+    nav{
+        width: 1200px;
+        margin: auto;
+        display: flex;
+        position: relative;
+        .join,.contact,.legal{
+            width: 216px;
+            display: flex;
+            flex-direction: column;
+            h2{
+                font-size: 20px;
+                color: #5f6464;
+                margin-bottom: 30px;
+            }
+            a{
+                font-size: 16px;
+                color: #5f6464;
+                margin-bottom: 18px;
+            }
+        }
+        >a{
+            width: 212px;
+            height: 28px;
+            position: absolute;
+            bottom: 100px;
+            right: 100px;
+            img{
+                width: 212px;
+                height: 28px;
+            }
+        }
+    }
+    footer{
+        width: 1220px;
+        margin: 80px auto;
+        display: flex;
+        .footl{
+            width: 50%;
+            display: flex;
+            justify-content: space-between;
+            a{
+                font-size: 14px;
+                color: #5f6464;
+            }
+        }
+        .footr{
+            width: 50%;
+            font-size: 14px;
+            color: #5f6464;
+            text-align: right;
+        }
+    }
+}
